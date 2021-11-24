@@ -1,4 +1,7 @@
-# start app with socket REPL
+# start app with socket PREPL
+	clj -J-Dclojure.server.browser="{:port 4444 :accept cljs.server.browser/prepl :launch-browser false}" -- --main cljs.main --watch "src" --compile cljs-2021.core
+
+## or socket REPL
 	clj -J-Dclojure.server.browser="{:port 4444 :accept cljs.server.browser/repl :launch-browser false}" -- --main cljs.main --watch "src" --compile cljs-2021.core
 
 ## connect socket REPL with inf-clojure etc.
